@@ -31,7 +31,7 @@ class NewTeamForm extends React.Component {
         event.preventDefault();
         this.addNewTeam(this.state)
         debugger;
-        // window.location.reload();
+        window.location.reload();
     }
     
     addNewTeam = (newTeam) => {

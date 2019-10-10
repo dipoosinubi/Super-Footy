@@ -5,6 +5,14 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import InputLabel from '@material-ui/core/InputLabel';
 
+const getTeams = () => {
+    fetch('api/team/')
+    .then(res => res.json())
+    .then((team) => {
+    // console.log(team)
+})
+    
+}
 class NewMerchandiseForm extends React.Component {
 
     state = {
@@ -13,7 +21,7 @@ class NewMerchandiseForm extends React.Component {
         availability: true,
         price: "",
         website: "",
-        team: ""
+        team:""
     }
     handleInput = (event) => {
         let newMerchandise = { ...this.state };
@@ -27,6 +35,8 @@ class NewMerchandiseForm extends React.Component {
         window.location.reload();
     }
 
+    
+
     addNewMerchandise = (newMerch) =>
         fetch('api/merchandise/',
             {
@@ -35,6 +45,8 @@ class NewMerchandiseForm extends React.Component {
                 body: JSON.stringify(newMerch)
             }
         ).then(res => res.json())
+
+
     render = () => (
         <Fragment>
             <form noValidate autoComplete="off" onSubmit={this.handleSubmit} >
@@ -93,9 +105,13 @@ class NewMerchandiseForm extends React.Component {
                         // id: 'outlined-age-native-simple',
                     }}
                 >
-                    <option value="" />
-                    <option value="1">Chelsea</option>
-                    <option value="3">Machester United</option>
+                    {console.log(getTeams())}
+                    {/* <option value="" />
+                     {/* {getTeams().map( team =>  */}
+                    {/* <option value={team.id}>{team.name}</option>
+                        )}
+                    <option value="3">Manchester United</option> */} 
+
                 </Select>
             </FormControl>
             <Button variant="contained" onClick={this.handleSubmit}>
