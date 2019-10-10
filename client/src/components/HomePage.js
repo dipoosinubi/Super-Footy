@@ -82,13 +82,26 @@ class NewTeamForm extends React.Component {
                     value={this.state.website}
                 />
             </form>
-            <Button variant="contained" onClick={this.handleSubmit}>
+            <Button variant="contained" onClick={this.handleSubmit}  style={stuff.websiteLink}>
                 Add Team
         </Button>
         </Fragment>
     )
 }
 
+const stuff = {
+    teamImage: {
+        height: "250px"
+    },
+    websiteLink: {
+        marginBottom: "30px",
+        backgroundColor: "#494e6b",
+        color:"white"
+    },
+    card: {
+        width: "200px"
+    },
+}
 
 export default class HomePage extends React.Component {
     state = {
@@ -118,12 +131,16 @@ export default class HomePage extends React.Component {
                 <NewTeamForm addNewTeam={this.addNewTeam} />
                 <div className="teamList">
                     {this.state.teams.map(team => (
-                        <Card className="teamCard" key={team.id}>
+                        <Card 
+                        className="teamCard"
+                        // style={stuff.card} 
+                        key={team.id} >
                             <CardActionArea>
                                 <Link to={`/team/${team.id}`} >
                                     <CardMedia
-                                        className="cardImg"
-                                        // component="img"
+                                        // className="cardImg"
+                                        style= {stuff.teamImage}
+                                        component="img"
                                         alt={team.name}
                                         image={team.picture}
                                         title={team.name}
@@ -139,12 +156,15 @@ export default class HomePage extends React.Component {
                                     </Typography>
                                     </CardContent>
                                 </Link>
-                                <Typography gutterBottom variant="h6" component="p">
-                                    Visit Team Website: {team.website}
-                                </Typography>
                             </CardActionArea>
+                                {/* <Typography gutterBottom variant="h6" component="p">
+                                    Visit Team Website: {team.website}
+                                </Typography> */}
+                                <Button variant="contained" href={team.website} target="_blank" style={stuff.websiteLink}>
+                Visit Team Website
+        </Button>
                         </Card>
-                    ))}
+                                ))}
                 </div>
             </div>
         )

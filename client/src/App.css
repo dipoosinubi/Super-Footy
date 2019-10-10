@@ -21,11 +21,8 @@
   color: #09d3ac;
 }
 .teamCard {
-  max-width: 250px;
+  max-width: 350px;
   margin: 30px 20px;
-}
-.cardImg {
-  height:50%
 }
 
 .teamList {
@@ -39,7 +36,8 @@
 }
 
 .navbar{
-  background-color: rgb(25, 53, 114);
+  /* background: linear-gradient(to right, #494e6b 0%, #B6a19e 100%); */
+  background: #494e6b ;
   color: white
 }
 
@@ -50,8 +48,8 @@
 .white {
   color: white!;
 }
-.img {
-  size: 10vh
+.cardImg {
+  size: 70px
 }
 .button{
   margin-top: 100px

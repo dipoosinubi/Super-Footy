@@ -107,10 +107,10 @@ class NewMerchandiseForm extends React.Component {
                 >
                     {console.log(getTeams())}
                     {/* <option value="" />
-                     {/* {getTeams().map( team =>  */}
-                    {/* <option value={team.id}>{team.name}</option>
-                        )}
-                    <option value="3">Manchester United</option> */} 
+                     { {getTeams().map( team => 
+                    <option value={team.id}>{team.name}</option>
+                        )} */}
+                     {/* <option value="3">Manchester United</option>  */}
 
                 </Select>
             </FormControl>
