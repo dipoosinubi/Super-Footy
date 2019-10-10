@@ -5,14 +5,13 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import InputLabel from '@material-ui/core/InputLabel';
 
-const getTeams = () => {
-    fetch('api/team/')
-    .then(res => res.json())
-    .then((team) => {
-    // console.log(team)
-})
-    
-}
+// const getTeams = () => {
+//     fetch('api/team/')
+//     .then(res => res.json())
+//     .then((team) => 
+//     team
+// )
+// }
 class NewMerchandiseForm extends React.Component {
 
     state = {
@@ -22,6 +21,10 @@ class NewMerchandiseForm extends React.Component {
         price: "",
         website: "",
         team:""
+    }
+
+    componentDidMount() {
+        this.getTeams()
     }
     handleInput = (event) => {
         let newMerchandise = { ...this.state };
@@ -35,7 +38,14 @@ class NewMerchandiseForm extends React.Component {
         window.location.reload();
     }
 
-    
+    getTeams = () => {
+        fetch('api/team/')
+        .then(res => res.json())
+        .then((team) => {
+            console.log(team)
+            this.setState({team})
+        }
+    )}
 
     addNewMerchandise = (newMerch) =>
         fetch('api/merchandise/',
@@ -46,7 +56,7 @@ class NewMerchandiseForm extends React.Component {
             }
         ).then(res => res.json())
 
-
+            
     render = () => (
         <Fragment>
             <form noValidate autoComplete="off" onSubmit={this.handleSubmit} >
@@ -105,11 +115,10 @@ class NewMerchandiseForm extends React.Component {
                         // id: 'outlined-age-native-simple',
                     }}
                 >
-                    {console.log(getTeams())}
-                    {/* <option value="" />
-                     { {getTeams().map( team => 
-                    <option value={team.id}>{team.name}</option>
-                        )} */}
+                    <option value="" />
+                      {this.state.team.map( team => 
+                        <option value={team.id}>{team.name}</option>
+                        )}
                      {/* <option value="3">Manchester United</option>  */}
 
                 </Select>
@@ -127,6 +136,7 @@ export default class MerchandiseList extends React.Component {
     }
     componentDidMount() {
         this.getMerchandiseFromServer()
+        // NewMerchandiseForm.getTeams()
     }
 
     getMerchandiseFromServer = () => {

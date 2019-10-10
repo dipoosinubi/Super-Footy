@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
+import Carousel from './Carousel.js'
 
 
 import { Typography } from "@material-ui/core";
@@ -82,25 +83,29 @@ class NewTeamForm extends React.Component {
                     value={this.state.website}
                 />
             </form>
-            <Button variant="contained" onClick={this.handleSubmit}  style={stuff.websiteLink}>
+            <Button variant="contained" onClick={this.handleSubmit}  style={styling.websiteLink}>
                 Add Team
         </Button>
         </Fragment>
     )
 }
 
-const stuff = {
+const styling = {
     teamImage: {
         height: "250px"
     },
     websiteLink: {
         marginBottom: "30px",
-        backgroundColor: "#494e6b",
+        backgroundColor: "#013852 ",
         color:"white"
     },
     card: {
         width: "200px"
     },
+    homeImage :{
+        height: "90px"
+    }
+
 }
 
 export default class HomePage extends React.Component {
@@ -123,7 +128,11 @@ export default class HomePage extends React.Component {
     render() {
         return (
             <div>
-                <h1>SUPES FOOTY </h1>
+                <div className="homeImage">
+                    {/* <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" /> */}
+
+                <Carousel style={styling.carousel}/>
+                </div>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br />
                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br />
                 It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. <br />
@@ -133,13 +142,13 @@ export default class HomePage extends React.Component {
                     {this.state.teams.map(team => (
                         <Card 
                         className="teamCard"
-                        // style={stuff.card} 
+                        // style={styling.card} 
                         key={team.id} >
                             <CardActionArea>
                                 <Link to={`/team/${team.id}`} >
                                     <CardMedia
                                         // className="cardImg"
-                                        style= {stuff.teamImage}
+                                        style= {styling.teamImage}
                                         component="img"
                                         alt={team.name}
                                         image={team.picture}
@@ -160,7 +169,7 @@ export default class HomePage extends React.Component {
                                 {/* <Typography gutterBottom variant="h6" component="p">
                                     Visit Team Website: {team.website}
                                 </Typography> */}
-                                <Button variant="contained" href={team.website} target="_blank" style={stuff.websiteLink}>
+                                <Button variant="contained" href={team.website} target="_blank" style={styling.websiteLink}>
                 Visit Team Website
         </Button>
                         </Card>

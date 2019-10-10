@@ -37,7 +37,7 @@
 
 .navbar{
   /* background: linear-gradient(to right, #494e6b 0%, #B6a19e 100%); */
-  background: #494e6b ;
+  background: #013852 ;
   color: white
 }
 
@@ -53,4 +53,16 @@
 }
 .button{
   margin-top: 100px
+}
+.homeImage {
+  /* margin: 0 auto; */
+    height: 600px;
+    width: auto;
+}
+.homeImage img {
+  height: 500px;
+  width: auto;
+  object-fit: cover;
+  bottom: 0;
+
 }
