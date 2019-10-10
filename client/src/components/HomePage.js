@@ -103,7 +103,8 @@ const styling = {
         width: "200px"
     },
     homeImage :{
-        height: "90px"
+        height: "90px",
+        marginTop: "100px",
     }
 
 }

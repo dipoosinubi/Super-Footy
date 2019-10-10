@@ -56,11 +56,12 @@
 }
 .homeImage {
   /* margin: 0 auto; */
-    height: 600px;
+    height: 550px;
     width: auto;
+    margin-bottom: 30px
 }
 .homeImage img {
-  height: 500px;
+  height: 550px;
   width: auto;
   object-fit: cover;
   bottom: 0;

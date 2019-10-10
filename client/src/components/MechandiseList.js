@@ -5,13 +5,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import InputLabel from '@material-ui/core/InputLabel';
 
-// const getTeams = () => {
-//     fetch('api/team/')
-//     .then(res => res.json())
-//     .then((team) => 
-//     team
-// )
-// }
+
 class NewMerchandiseForm extends React.Component {
 
     state = {
@@ -23,9 +17,7 @@ class NewMerchandiseForm extends React.Component {
         team:""
     }
 
-    componentDidMount() {
-        this.getTeams()
-    }
+  
     handleInput = (event) => {
         let newMerchandise = { ...this.state };
         newMerchandise[event.target.name] = event.target.value;
@@ -41,11 +33,7 @@ class NewMerchandiseForm extends React.Component {
     getTeams = () => {
         fetch('api/team/')
         .then(res => res.json())
-        .then((team) => {
-            console.log(team)
-            this.setState({team})
         }
-    )}
 
     addNewMerchandise = (newMerch) =>
         fetch('api/merchandise/',
@@ -100,7 +88,7 @@ class NewMerchandiseForm extends React.Component {
                     onChange={this.handleInput}
                     value={this.state.website}
                 />
-            </form>
+            </form> 
             <FormControl variant="outlined">
                 <InputLabel htmlFor="outlined-age-native-simple">
                     Team
@@ -112,14 +100,14 @@ class NewMerchandiseForm extends React.Component {
                     // labelWidth={labelWidth}
                     inputProps={{
                         name: 'team',
-                        // id: 'outlined-age-native-simple',
+                        id: 'outlined-team-native-simple',
                     }}
                 >
                     <option value="" />
-                      {this.state.team.map( team => 
+                      {/* {this.v.map( team => 
                         <option value={team.id}>{team.name}</option>
-                        )}
-                     {/* <option value="3">Manchester United</option>  */}
+                        )} */}
+                     <option value="3">Manchester United</option> 
 
                 </Select>
             </FormControl>
@@ -128,6 +116,16 @@ class NewMerchandiseForm extends React.Component {
         </Button>
         </Fragment>
     )
+}
+
+const styling = {
+    merchImage: {
+        height: "450px"
+    },
+   merchForm: {
+       marginBottom: "100px"
+   }
+
 }
 
 export default class MerchandiseList extends React.Component {
@@ -150,14 +148,13 @@ export default class MerchandiseList extends React.Component {
     render() {
         return (
             <div>
-                <div>
+                <div style={styling.merchForm}>
                     <NewMerchandiseForm addNewMerchandise={this.addNewMerchandise} />
                 </div>
                 <ul>
                     {this.state.merchandise.map(merchandise => (
                         <li>
-                            <img
-                                src={merchandise.picture}
+                            <img src={merchandise.picture} style={styling.merchImage}
                             /><br />
                             {merchandise.description} <br />
                             {merchandise.price} <br />

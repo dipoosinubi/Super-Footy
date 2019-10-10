@@ -8,28 +8,35 @@ const styling = {
 }
 const items = [
   {
-    src: 'https://images.unsplash.com/photo-1540753003857-32db1552eead?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+    src: 'https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.photobackgroundhd.com%2Fwp-content%2Fuploads%2F2018%2F09%2FCristiano-Ronaldo-High-Quality-Wallpapers.jpg&f=1&nofb=1',
     altText: '',
     id: "image",
     caption: '',
     header: '',
     key: '1',
-    height: "10px"
   },
   {
-    src: 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+    src:'https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Flongwallpapers.com%2FDesktop-Wallpaper%2Fadidas-soccer-wallpaper-high-quality-resolution-For-Desktop-Wallpaper.jpg&f=1&nofb=1',
     altText: '',
     caption: '',
     header: '',
     key: '2'
   },
   {
-    src: 'https://images.unsplash.com/photo-1542683305-710078a12f73?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+   
+    src: 'https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.hdwallpapers.in%2Fdownload%2Ffc_barcelona_football_club_team-2560x1440.jpg&f=1&nofb=1',
     altText: '',
     caption: '',
     header: '',
     key: '3'
-  }
+  },
+  {
+     src:'https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.guidingtech.com%2Fmedia%2Fassets%2FFIFA-world-cup-wallpaper-7.jpg&f=1&nofb=1',
+     altText: '',
+     caption: '',
+     header: '',
+    key: '4'
+  },
 ];
 
 const Example = () => <UncontrolledCarousel items={items}  style={styling.carousel} />;

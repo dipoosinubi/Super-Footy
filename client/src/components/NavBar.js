@@ -8,6 +8,16 @@ import {
   NavItem,
   NavLink,
   } from 'reactstrap';
+import SvgIcon from '@material-ui/core/SvgIcon';
+
+function HomeIcon(props) {
+  return (
+    <SvgIcon {...props}>
+      <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+    </SvgIcon>
+  );
+}
+
 
 export default class NavBar extends React.Component {
   constructor(props) {
@@ -26,12 +36,14 @@ export default class NavBar extends React.Component {
   render() {
     return (
       <div>
+        
         <Navbar  className="navBody" color="#05386B" dark expand="md">
-          <NavbarBrand href="/">Home </NavbarBrand>
+      {/* <HomeIcon /> */}
+          <NavbarBrand href="/"><h1>SUPER FOOTY </h1>  </NavbarBrand>
+             
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto"  navbar >
-             <h1>SUPER FOOTY </h1>
               <NavItem>
                 <NavLink className="navBody" href="/merchandise">Merchandise</NavLink>
               </NavItem>
