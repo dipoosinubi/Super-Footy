@@ -31,7 +31,7 @@ const items = [
     key: '3'
   },
   {
-     src:'https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.guidingtech.com%2Fmedia%2Fassets%2FFIFA-world-cup-wallpaper-7.jpg&f=1&nofb=1',
+     src:'https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F1223157.jpg&f=1&nofb=1',
      altText: '',
      caption: '',
      header: '',

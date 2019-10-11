@@ -3,6 +3,13 @@ import Button from "@material-ui/core/Button";
 import TeamPage from './TeamPage';
 
 
+const styling = { 
+    websiteLink: {
+        marginBottom: "30px",
+        backgroundColor: "#013852 ",
+        color:"white"
+    },
+}
 export default class ScheduleList extends React.Component {
     state = {
         teams: []
@@ -28,7 +35,7 @@ export default class ScheduleList extends React.Component {
                  return (<li> 
                      Game: {teamName}   vs {schedule.name} <br/> Location: {schedule.location} <br/>
                      Date: {schedule.date} <br/> Time: {schedule.time}<br/>
-                     <Button variant="contained" href={schedule.website} target="_blank">
+                     <Button variant="contained" href={schedule.website} target="_blank" style={styling.websiteLink}>
                      Buy Tickets
                      </Button>
                      <hr/>

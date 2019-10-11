@@ -111,7 +111,7 @@ class NewMerchandiseForm extends React.Component {
 
                 </Select>
             </FormControl>
-            <Button variant="contained" onClick={this.handleSubmit}>
+            <Button variant="contained" onClick={this.handleSubmit} style={styling.merchAdd}>
                 Add New Merchandise
         </Button>
         </Fragment>
@@ -123,7 +123,18 @@ const styling = {
         height: "450px"
     },
    merchForm: {
-       marginBottom: "100px"
+       marginBottom: "100px",
+       
+   },
+   merchLink: {
+    backgroundColor: "#013852 ",
+    color: "white"
+   },
+   merchAdd:{
+    backgroundColor: "#013852 ",
+    color:"white",
+    marginLeft:"100px",
+     marginTop: "10px"
    }
 
 }
@@ -158,7 +169,7 @@ export default class MerchandiseList extends React.Component {
                             /><br />
                             {merchandise.description} <br />
                             {merchandise.price} <br />
-                            <Button variant="contained" href={merchandise.website} target="_blank">
+                            <Button variant="contained" href={merchandise.website} target="_blank" style={styling.merchLink}>
                                 Buy
                                 </Button>
                             <hr />

@@ -3,7 +3,17 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Button from "@material-ui/core/Button";
 
-
+const styling = { 
+    websiteLink: {
+        marginBottom: "30px",
+        backgroundColor: "#013852 ",
+        color:"white"
+    },
+    about: {
+        marginBottom: "50px",
+        marginTop: "50px"
+    }
+}
 export default class TeamPage extends React.Component {
     state = {
         team: {
@@ -27,9 +37,9 @@ export default class TeamPage extends React.Component {
 
     render = () => {
         return (
-            <div>
+            <div >
                 {/* <h1>Team Page of {this.props.match.params.id}</h1> */}
-               <h2>Welcome to {this.state.team.name} Page
+               <h2 style={styling.about}> Welcome to {this.state.team.name} Page
                </h2> 
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy <br/>text ever since the 1500s, 
                 when an unknown printer took a galley of type and scrambled it to make a type specimen book. <br />
@@ -45,7 +55,7 @@ export default class TeamPage extends React.Component {
                                             <img src={merchandise.picture} /> <br />
                                             {merchandise.description} <br />
                                             {merchandise.price} <br />
-                                            <Button variant="contained" href={merchandise.website} target="_blank">
+                                            <Button variant="contained" href={merchandise.website} target="_blank" style={styling.websiteLink}>
                                                 Buy
         </Button> <hr />
                                         </li>
@@ -62,7 +72,7 @@ export default class TeamPage extends React.Component {
                                             Date: {schedule.date}<br />
                                             Time: {schedule.time}<br />
                                             Location: {schedule.location}<br />
-                                            <Button variant="contained" href={schedule.website} target="_blank">
+                                            <Button variant="contained" href={schedule.website} target="_blank" style={styling.websiteLink}>
                                                 Buy Tickets
                                              </Button> <hr />
                                         </li>
