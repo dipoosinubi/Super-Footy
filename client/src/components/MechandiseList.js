@@ -9,12 +9,15 @@ import InputLabel from '@material-ui/core/InputLabel';
 class NewMerchandiseForm extends React.Component {
 
     state = {
-        description: "",
-        picture: "",
-        availability: true,
-        price: "",
-        website: "",
-        team:""
+        teams: [],
+        formData: {
+            description: "",
+            picture: "",
+            availability: true,
+            price: "",
+            website: "",
+            team:""
+        }
     }
 
   
@@ -32,7 +35,10 @@ class NewMerchandiseForm extends React.Component {
 
     getTeams = () => {
         fetch('api/team/')
-        .then(res => res.json())
+            .then(res => res.json())
+            .then(teams => {
+                this.setState({teams})
+            })
         }
 
     addNewMerchandise = (newMerch) =>
@@ -56,7 +62,7 @@ class NewMerchandiseForm extends React.Component {
                     type="text"
                     name="description"
                     onChange={this.handleInput}
-                    value={this.state.description}
+                    value={this.state.formData.description}
                 />
                 <TextField
                     id="outlined-with-placeholder"
@@ -66,7 +72,7 @@ class NewMerchandiseForm extends React.Component {
                     type="text"
                     name="picture"
                     onChange={this.handleInput}
-                    value={this.state.picture}
+                    value={this.state.formData.picture}
                 />
                 <TextField
                     id="outlined-with-placeholder"
@@ -76,7 +82,7 @@ class NewMerchandiseForm extends React.Component {
                     type="text"
                     name="price"
                     onChange={this.handleInput}
-                    value={this.state.price}
+                    value={this.state.formData.price}
                 />
                 <TextField
                     id="outlined-with-placeholder"
@@ -86,7 +92,7 @@ class NewMerchandiseForm extends React.Component {
                     type="text"
                     name="website"
                     onChange={this.handleInput}
-                    value={this.state.website}
+                    value={this.state.formData.website}
                 />
             </form> 
             <FormControl variant="outlined">
@@ -104,10 +110,9 @@ class NewMerchandiseForm extends React.Component {
                     }}
                 >
                     <option value="" />
-                      {/* {this.v.map( team => 
-                        <option value={team.id}>{team.name}</option>
-                        )} */}
-                     <option value="3">Manchester United</option> 
+                        {this.state.teams.map( team =>
+                            <option value ={team.id}>{team.name}</option>)}
+                     {/* <option value="3">Manchester United</option>  */}
 
                 </Select>
             </FormControl>
