@@ -101,7 +101,7 @@ class NewMerchandiseForm extends React.Component {
                 </InputLabel>
                 <Select
                     native
-                    // value={this.state.team}
+                    value={this.state.teams.id}
                     onChange={this.handleInput}
                     // labelWidth={labelWidth}
                     inputProps={{
@@ -111,7 +111,7 @@ class NewMerchandiseForm extends React.Component {
                 >
                     <option value="" />
                         {this.state.teams.map( team =>
-                            <option value ={team.id}>{team.name}</option>)}
+                            <option value ={teams.id}>{teams.name}</option>)}
                      {/* <option value="3">Manchester United</option>  */}
 
                 </Select>
