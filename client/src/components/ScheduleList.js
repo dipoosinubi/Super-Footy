@@ -9,6 +9,9 @@ const styling = {
         backgroundColor: "#013852 ",
         color:"white"
     },
+    scheduleList:{
+        marginTop: "100px"
+    }
 }
 export default class ScheduleList extends React.Component {
     state = {
@@ -45,7 +48,7 @@ export default class ScheduleList extends React.Component {
 
     render() {
         return (
-            <div>
+            <div style={styling.scheduleList}>
                 <ul>
                     {this.state.teams.map(team => (
                         this.scheduleComponent(team.name, team.schedule)
