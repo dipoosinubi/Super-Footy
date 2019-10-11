@@ -110,7 +110,7 @@ class NewMerchandiseForm extends React.Component {
                     }}
                 >
                     <option value="" />
-                        {this.state.teams.map( team =>
+                        {this.state.teams.map( teams =>
                             <option value ={teams.id}>{teams.name}</option>)}
                      {/* <option value="3">Manchester United</option>  */}
 
