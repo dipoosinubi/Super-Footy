@@ -109,7 +109,8 @@ class NewMerchandiseForm extends React.Component {
                         id: 'outlined-team-native-simple',
                     }}
                 >
-                    <option value="" />
+                    <option value="" />  
+                    {console.log(teams)}
                         {this.state.teams.map( teams =>
                             <option value ={teams.id}>{teams.name}</option>)}
                      {/* <option value="3">Manchester United</option>  */}
