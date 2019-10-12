@@ -75,3 +75,7 @@
   background: #013852 ;
   color: "white"
 }
+.footerContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
