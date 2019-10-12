@@ -1,7 +1,7 @@
-# General Assembly SEI - Project 3
+# General Assembly SEI - Project 4
 
 * [Deployed App](https://thawing-bayou-98423.herokuapp.com)
-* [Project Board](https://github.com/dipoosinubi/FantasyDB/projects/1)
+* [Project Board](https://github.com/dipoosinubi/project4/projects/1)
 
 ## Overview
 
