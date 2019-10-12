@@ -110,7 +110,6 @@ class NewMerchandiseForm extends React.Component {
                     }}
                 >
                     <option value="" />  
-                    {console.log(teams)}
                         {this.state.teams.map( teams =>
                             <option value ={teams.id}>{teams.name}</option>)}
                      {/* <option value="3">Manchester United</option>  */}
@@ -151,7 +150,6 @@ export default class MerchandiseList extends React.Component {
     }
     componentDidMount() {
         this.getMerchandiseFromServer()
-        // NewMerchandiseForm.getTeams()
     }
 
     getMerchandiseFromServer = () => {

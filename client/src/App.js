@@ -23,6 +23,13 @@ function App() {
           </Switch>
         </div>
       </Router>
+      <footer className="footer">
+        <div className="footerContainer">
+          <div>
+            <a href="https://www.premierleague.com/tables" target="_blank">EPL</a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
