@@ -38,7 +38,6 @@ export default class TeamPage extends React.Component {
     render = () => {
         return (
             <div >
-                {/* <h1>Team Page of {this.props.match.params.id}</h1> */}
                <h2 style={styling.about}> Welcome to {this.state.team.name} Page
                </h2> 
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy <br/>text ever since the 1500s, 

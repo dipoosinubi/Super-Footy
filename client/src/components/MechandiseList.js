@@ -9,8 +9,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 class NewMerchandiseForm extends React.Component {
 
     state = {
-        teams: [],
-        formData: {
+        teams: {
             description: "",
             picture: "",
             availability: true,
@@ -62,7 +61,7 @@ class NewMerchandiseForm extends React.Component {
                     type="text"
                     name="description"
                     onChange={this.handleInput}
-                    value={this.state.formData.description}
+                    value={this.state.teams.description}
                 />
                 <TextField
                     id="outlined-with-placeholder"
@@ -72,7 +71,7 @@ class NewMerchandiseForm extends React.Component {
                     type="text"
                     name="picture"
                     onChange={this.handleInput}
-                    value={this.state.formData.picture}
+                    value={this.state.teams.picture}
                 />
                 <TextField
                     id="outlined-with-placeholder"
@@ -82,7 +81,7 @@ class NewMerchandiseForm extends React.Component {
                     type="text"
                     name="price"
                     onChange={this.handleInput}
-                    value={this.state.formData.price}
+                    value={this.state.teams.price}
                 />
                 <TextField
                     id="outlined-with-placeholder"
@@ -92,7 +91,7 @@ class NewMerchandiseForm extends React.Component {
                     type="text"
                     name="website"
                     onChange={this.handleInput}
-                    value={this.state.formData.website}
+                    value={this.state.teams.website}
                 />
             </form> 
             <FormControl variant="outlined">
@@ -103,16 +102,15 @@ class NewMerchandiseForm extends React.Component {
                     native
                     value={this.state.teams.id}
                     onChange={this.handleInput}
-                    // labelWidth={labelWidth}
                     inputProps={{
                         name: 'team',
                         id: 'outlined-team-native-simple',
                     }}
                 >
                     <option value="" />  
-                        {this.state.teams.map( teams =>
-                            <option value ={teams.id}>{teams.name}</option>)}
-                     {/* <option value="3">Manchester United</option>  */}
+                    <option value="1">Chelsea FC</option>
+                     <option value="3">Manchester United</option> 
+                     <optiopn value="16">Atlanta United</optiopn>
 
                 </Select>
             </FormControl>

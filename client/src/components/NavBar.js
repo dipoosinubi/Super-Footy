@@ -38,7 +38,6 @@ export default class NavBar extends React.Component {
       <div>
         
         <Navbar  className="navBody" color="#05386B" dark expand="md">
-      {/* <HomeIcon /> */}
           <NavbarBrand href="/"><h1>SUPER FOOTY </h1>  </NavbarBrand>
              
           <NavbarToggler onClick={this.toggle} />

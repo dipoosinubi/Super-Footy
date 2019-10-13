@@ -134,19 +134,19 @@ export default class HomePage extends React.Component {
 
                 <Carousel style={styling.carousel}/>
                 </div>
-                 <h2> A la Belgique</h2>
-                 <p> Welcome to Super Footy, your one stop shop for all things soccer. </p>
+                 <h2> A la Belgique !!</h2>
+                 <p> Welcome to Super Footy, the number one database to all things soccer worldwide, you want it weve got it. <br/>
+                 We provide serivces such as ticketing, scheduling and merchandise. Over here at Super Footy, you can be sure we match your passion; so let us cater to your soccer needs. </p> 
+                 <hr/>
                 <NewTeamForm addNewTeam={this.addNewTeam} />
                 <div className="teamList">
                     {this.state.teams.map(team => (
                         <Card 
                         className="teamCard"
-                        // style={styling.card} 
                         key={team.id} >
                             <CardActionArea>
                                 <Link to={`/team/${team.id}`} >
                                     <CardMedia
-                                        // className="cardImg"
                                         style= {styling.teamImage}
                                         component="img"
                                         alt={team.name}
@@ -165,9 +165,6 @@ export default class HomePage extends React.Component {
                                     </CardContent>
                                 </Link>
                             </CardActionArea>
-                                {/* <Typography gutterBottom variant="h6" component="p">
-                                    Visit Team Website: {team.website}
-                                </Typography> */}
                                 <Button variant="contained" href={team.website} target="_blank" style={styling.websiteLink}>
                 Visit Team Website
         </Button>
