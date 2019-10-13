@@ -28,8 +28,8 @@ The goal of this application is a
 
 ## Wireframes
 
-![Home](client/public/home.jpg)
+![Home](client/public/Home.jpg)
 
-![League Page](client/public/league.jpg)
+![Team Page](client/public/teamPage.jpg)
 
-![Player Page](client/public/player.jpg)
+![Merchandise Page](client/public/merchPage.jpg)
