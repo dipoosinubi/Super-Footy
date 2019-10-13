@@ -130,8 +130,6 @@ export default class HomePage extends React.Component {
         return (
             <div>
                 <div className="homeImage">
-                    {/* <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" /> */}
-
                 <Carousel style={styling.carousel}/>
                 </div>
                  <h2> A la Belgique !!</h2>

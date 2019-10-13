@@ -11,6 +11,11 @@ const styling ={
   logo: {
     width: "150px",
     height: "100px"
+  },
+  epl:{
+    background: "./epl.png",
+    width: "150px",
+    height: "100px"
   }
 }
 
@@ -33,9 +38,11 @@ function App() {
       <footer className="footer">
         <div className="footerContainer">
           <div>
-            <a href="https://www.premierleague.com/tables" target="_blank"><img src="./epl.png" style={styling.logo}/></a>
+            {/* <a href="https://www.premierleague.com/tables" target="_blank"><img src="./epl.png" style={styling.logo}/></a> */}
+            <a href="https://www.premierleague.com/tables" target="_blank" style={styling.epl}></a>
           </div>
           <div>
+            {/* <a href="https://www.skysports.com/la-liga-table" target="_blank"><img src="./laliga.png" style={styling.logo}/></a> */}
             <a href="https://www.skysports.com/la-liga-table" target="_blank"><img src="./laliga.png" style={styling.logo}/></a>
           </div>
           <div>
