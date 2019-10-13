@@ -39,7 +39,7 @@ function App() {
         <div className="footerContainer">
           <div>
             {/* <a href="https://www.premierleague.com/tables" target="_blank"><img src="./epl.png" style={styling.logo}/></a> */}
-            <a href="https://www.premierleague.com/tables" target="_blank" style={styling.epl}></a>
+            <a href="https://www.premierleague.com/tables" target="_blank"><img src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Flogok.org%2Fwp-content%2Fuploads%2F2014%2F11%2FPremier-League-logo-2016.png&f=1&nofb=1" style={styling.logo}/></a>
           </div>
           <div>
             {/* <a href="https://www.skysports.com/la-liga-table" target="_blank"><img src="./laliga.png" style={styling.logo}/></a> */}
