@@ -33,3 +33,5 @@ The goal of this application is a
 ![Team Page](client/public/teamPage.jpg)
 
 ![Merchandise Page](client/public/merchPage.jpg)
+
+![Schedule Page](client/public/schedPage.jpg)
