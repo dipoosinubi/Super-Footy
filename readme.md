@@ -5,7 +5,7 @@
 
 ## Overview
 
-The goal of this application is a
+The goal of this application was to create a full stack application using a Django database and a React frontend. Super Footy was created as an application for soccer fans to find all their soccer needs in one location as opposed to having to visit multiple websites. Super Footy has a collection of merchandises and game schedules, already curated, as well as tables of all the major soccer leagues. Fans are also provided the choice of shopping by teams or simply going through the entire catalog. 
 
 ## Technologies Used:
 * React
@@ -19,8 +19,7 @@ The goal of this application is a
 ## Version 2 Goals:
 * Apply search functionality 
 * Add google maps to show location of stadiums
-* Sort merchandise by price
-* 
+* Sort merchandise by price 
 
 ## ERD
 

@@ -132,9 +132,14 @@ export default class HomePage extends React.Component {
                 <div className="homeImage">
                 <Carousel style={styling.carousel}/>
                 </div>
-                 <h2> A la Belgique !!</h2>
-                 <p> Welcome to Super Footy, the number one database to all things soccer worldwide, you want it weve got it. <br/>
+                 <h2> You Never Walk Alone !!</h2>
+                 <p> Welcome to Super Footy, the number one database to all things soccer worldwide! You want it, we've got it!!! <br/>
                  We provide serivces such as ticketing, scheduling and merchandise. Over here at Super Footy, you can be sure we match your passion; so let us cater to your soccer needs. </p> 
+                 <br/>
+
+                 <p>Super Footy has taken the hard work out of being soccer fans and curated all your favorite merchandises, game tickets and league tables <br/>
+                 all in one place. You can either find all items by clicking the links in the top right corner, or to shop by teams, simply click on your favorite team.
+                   </p>
                  <hr/>
                 <NewTeamForm addNewTeam={this.addNewTeam} />
                 <div className="teamList">
