@@ -46,7 +46,7 @@ function App() {
             <a href="https://www.skysports.com/la-liga-table" target="_blank"><img src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fprojects.fivethirtyeight.com%2Fsoccer-predictions%2Fimages%2Fla-liga-2-logo.png&f=1&nofb=1" style={styling.logo}/></a>
           </div>
           <div>
-            <a href="https://www.mlssoccer.com/standings" target="_blank"><img src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F8%2F86%2FMLS_logo.svg%2F970px-MLS_logo.svg.png&f=1&nofb=1" style={styling.logo}/></a>
+            <a href="https://www.mlssoccer.com/standings" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/MLS_crest_logo_Mono_rev_black.svg/424px-MLS_crest_logo_Mono_rev_black.svg.png" style={styling.logo}/></a>
           </div>
           <div>
             <a href="https://www.bbc.com/sport/football/french-ligue-one/table" target="_blank"><img src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Flogok.org%2Fwp-content%2Fuploads%2F2014%2F11%2FLigue_1-logo-.png&f=1&nofb=1" style={styling.logo}/></a>
